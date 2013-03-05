@@ -1,0 +1,29 @@
+{
+    "name": "tickbw/silex-riak",
+    "description": "Riak extension for Silex",
+    "keywords": ["silex", "riak"],
+    "homepage": "https://github.com/tickbw/Silex-Riak",
+    "type": "library",
+    "license": "MIT",
+    "version": "dev",
+    "authors": [
+        {
+            "name": "Ben Wann",
+            "email": "ben.wann@gmail.com",
+            "homepage": "http://github.com/tickbw"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "tickbw/riak-php-client": "*"
+    },
+    "require-dev": {
+        "silex/silex": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "SilexRiak": "src"
+        }
+    },
+    "minimum-stability": "dev"
+}
