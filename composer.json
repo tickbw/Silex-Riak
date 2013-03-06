@@ -5,7 +5,6 @@
     "homepage": "https://github.com/tickbw/Silex-Riak",
     "type": "library",
     "license": "MIT",
-    "version": "dev",
     "authors": [
         {
             "name": "Ben Wann",
