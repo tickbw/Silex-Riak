@@ -23,6 +23,6 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "tickbw/riak-php-client": "master"
+        "tickbw/riak-php-client": "dev-master"
     }
 }
