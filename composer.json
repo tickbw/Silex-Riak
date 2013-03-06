@@ -13,9 +13,11 @@
             "homepage": "http://github.com/tickbw"
         }
     ],
+    "require": {
+    	"tickbw/riak-php-client": "dev-master"
+    }
     "require-dev": {
-        "silex/silex": "*",
-        "tickbw/riak-php-client": "dev-master"
+        "silex/silex": "*"
     },
     "autoload": {
         "psr-0": {
