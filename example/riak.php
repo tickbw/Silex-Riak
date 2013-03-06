@@ -10,7 +10,7 @@ class MyListener {
 
 $app = new Silex\Application();
 
-$app->register(new SilexRiak\RiakExtension(), array(
+$app->register(new SilexRiak\RiakServiceProvider(), array(
     'riak.connection'    => array(
         'configuration' => function($configuration) {
             $configuration->setLoggerCallable(function($logs) {
@@ -21,8 +21,28 @@ $app->register(new SilexRiak\RiakExtension(), array(
 ));
 
 $app->get('/', function() use($app) {
-    $dbs = $app['riak']->listDatabases();
-    return 'You have ' . count($dbs) . ' Databases';
+    
+    # Choose a bucket name
+    $bucket = $app['riak']->bucket('test');
+    
+    # Supply a key under which to store your data
+    $person = $bucket->newObject('riak_developer_1', array(
+    'name' => "John Smith",
+    'age' => 28,
+    'company' => "Facebook"
+    		));
+    
+    # Save the object to Riak
+    $person->store();
+    
+    # Fetch the object
+    $person = $bucket->get('riak_developer_1');
+    
+    # Update the object
+    $person->data['company'] = "Google";
+    $person->store();
+    
+    print_r($person);
 });
 
 $app->run();
