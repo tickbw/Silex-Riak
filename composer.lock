@@ -7,12 +7,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tickbw/riak-php-client.git",
-                "reference": "634b546d04da6bdf909693014918f8608e8c62ec"
+                "reference": "cf4744568af01c56d9b8d699c7f15f1a68b77c04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tickbw/riak-php-client/zipball/634b546d04da6bdf909693014918f8608e8c62ec",
-                "reference": "634b546d04da6bdf909693014918f8608e8c62ec",
+                "url": "https://api.github.com/repos/tickbw/riak-php-client/zipball/cf4744568af01c56d9b8d699c7f15f1a68b77c04",
+                "reference": "cf4744568af01c56d9b8d699c7f15f1a68b77c04",
                 "shasum": ""
             },
             "require": {
@@ -43,7 +43,7 @@
                 "driver",
                 "nosql"
             ],
-            "time": "2013-03-06 17:59:21"
+            "time": "2013-03-06 19:59:34"
         }
     ],
     "packages-dev": [
@@ -391,12 +391,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing.git",
-                "reference": "b558b400a8301beb9b8e08e4702c160caeb8ef1d"
+                "reference": "3a97436e581bae44d0eec454a74bbb4f93593e78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Routing/zipball/b558b400a8301beb9b8e08e4702c160caeb8ef1d",
-                "reference": "b558b400a8301beb9b8e08e4702c160caeb8ef1d",
+                "url": "https://api.github.com/repos/symfony/Routing/zipball/3a97436e581bae44d0eec454a74bbb4f93593e78",
+                "reference": "3a97436e581bae44d0eec454a74bbb4f93593e78",
                 "shasum": ""
             },
             "require": {
@@ -440,7 +440,7 @@
             ],
             "description": "Symfony Routing Component",
             "homepage": "http://symfony.com",
-            "time": "2013-03-05 14:23:59"
+            "time": "2013-03-06 19:31:19"
         }
     ],
     "aliases": [

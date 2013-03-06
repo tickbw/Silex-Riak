@@ -2,21 +2,12 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-class MyListener {
-    function postConnect() { 
-        print_r(func_get_args()); 
-    }
-}
-
 $app = new Silex\Application();
 
 $app->register(new SilexRiak\RiakServiceProvider(), array(
     'riak.connection'    => array(
-        'configuration' => function($configuration) {
-            $configuration->setLoggerCallable(function($logs) {
-                print_r($logs);
-            });    
-        }
+        'host' => '127.0.0.1',
+    	'port' => '8098'
     )
 ));
 
@@ -42,7 +33,7 @@ $app->get('/', function() use($app) {
     $person->data['company'] = "Google";
     $person->store();
     
-    print_r($person);
+    return print_r($person,true);
 });
 
 $app->run();

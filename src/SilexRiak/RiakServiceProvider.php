@@ -26,17 +26,8 @@ class RiakServiceProvider implements ServiceProviderInterface {
 			
 			$connOpts = isset ( $app ['riak.connection'] ) ? array_merge ( $options, $app ['riak.connection'] ) : $options;
 			
-			if (isset ( $connOpts ['configuration'] ) && is_callable ( $connOpts ['configuration'] )) {
-				call_user_func_array ( $connOpts ['configuration'], array (
-						$configuration 
-				) );
-			}
-			
-			return new Riak\Client ( $connOpts ['host'], $connOpts ['port'], $configuration );
+			return new Riak\Client ( $connOpts ['host'], $connOpts ['port'] );
 		} );
 		
-		$app ['riak.configuration'] = $app->share ( function () use($app) {
-			return $app ['riak']->getConfiguration ();
-		} );
 	}
 }
