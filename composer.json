@@ -14,15 +14,13 @@
         }
     ],
     "require-dev": {
-        "silex/silex": "*"
+        "silex/silex": "*",
+        "tickbw/riak-php-client": "dev-master"
     },
     "autoload": {
         "psr-0": {
             "SilexRiak": "src"
         }
     },
-    "minimum-stability": "dev",
-    "require": {
-        "tickbw/riak-php-client": "dev-master"
-    }
+    "minimum-stability": "dev"
 }
